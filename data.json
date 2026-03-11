@@ -1,0 +1,35 @@
+{
+  "courseTitle": "Poker Theory and Design of Poker Bots",
+  "lectures": [
+    {
+      "id": 1,
+      "title": "Introduction",
+      "date": "13 February, 2026",
+      "TA": "Arjun Maneesh Agarwal",
+      "description": "We talk about some general ideas and (fail to) solve Kunh Poker.",
+      "resources": [
+        { "name": "Lecture Slides", "link": "#", "label": "PDF" }
+      ]
+    },
+    {
+      "id": 2,
+      "title": "Post Flop Strategy",
+      "date": "17 February, 2026",
+      "TA": "Arjun Maneesh Agarwal",
+      "description": "Hand Odds, Pot Odds, Expected Value and Raising",
+      "resources": [
+        { "name": "Lecture Slides", "link": "#", "label": "PDF" }
+      ]
+    },
+    {
+      "id": 3,
+      "title": "Pre-Flop Strategy",
+      "date": "24 February, 2026",
+      "TA": "Arjun Maneesh Agarwal",
+      "description": "Hand Strength, Range Analysis, VPIP and Basic Bluffing",
+      "resources": [
+        { "name": "Lecture Slides", "link": "#", "label": "PDF" }
+      ]
+    }
+  ]
+}

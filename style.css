@@ -1,0 +1,109 @@
+/* Import a pixel font similar to m6x11 if not hosted locally */
+@font-face {
+    font-family: 'm6x11';
+    src: url('fonts/m6x11.ttf'); /* Ensure you have this file path correct */
+    font-display: swap;
+}
+
+body {
+    font-family: 'IBM Plex Mono', 'Courier New', monospace; /* Technical, readable body font */
+    background-color: #0f1711; /* Deep poker table dark green/black */
+    color: #e0e0e0;
+    line-height: 1.6;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+}
+
+.container {
+    width: 90%;
+    max-width: 900px;
+    padding: 60px 20px;
+}
+
+header {
+    border-bottom: 3px solid #2d5a3f;
+    margin-bottom: 40px;
+    padding-bottom: 20px;
+}
+
+/* Titles using the requested m6x11 font */
+h1, h2, .lecture-title, .section-label {
+    font-family: 'm6x11', 'Courier New', sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+h1 { font-size: 3.5rem; color: #4ade80; margin: 0; }
+h2 { font-size: 2.2rem; color: #f87171; border-bottom: 1px solid #2d5a3f; padding-bottom: 5px; margin-top: 40px; }
+
+.lecture-card {
+    background: #1a241d;
+    border: 1px solid #2d5a3f;
+    border-left: 5px solid #4ade80; /* "Green chip" accent */
+    border-radius: 4px;
+    padding: 30px;
+    margin-bottom: 25px;
+    transition: transform 0.2s ease;
+}
+
+.lecture-card:hover {
+    transform: translateX(5px);
+    border-color: #4ade80;
+}
+
+.lecture-title { font-size: 1.8rem; color: #ffffff; }
+
+.meta { color: #94a3b8; font-weight: 500; margin: 8px 0 20px 0; font-size: 0.85rem; }
+
+.section-label { font-weight: bold; margin-top: 20px; display: block; color: #f87171; font-size: 1.2rem; }
+
+ul { list-style: none; padding-left: 0; margin: 15px 0; }
+
+li { 
+    margin: 8px 0; 
+    font-size: 0.9rem; 
+    padding-left: 15px; 
+    position: relative;
+}
+
+li::before {
+    content: "♠";
+    position: absolute;
+    left: 0;
+    color: #4ade80;
+}
+
+a { color: #60a5fa; text-decoration: none; border-bottom: 1px solid transparent; }
+a:hover { border-bottom: 1px solid #60a5fa; }
+
+.lecture-description {
+    margin: 15px 0;
+    color: #cbd5e1;
+    font-size: 0.95rem;
+}
+
+.cta-container {
+    margin: 30px 0;
+}
+
+.github-btn {
+    display: inline-block;
+    padding: 10px 24px;
+    background: transparent;
+    color: #4ade80; /* The green theme color */
+    border: 2px solid #4ade80;
+    font-family: 'm6x11', 'Courier New', sans-serif;
+    font-size: 1.4rem;
+    text-decoration: none;
+    border-radius: 2px;
+    transition: all 0.2s ease;
+    cursor: pointer;
+}
+
+.github-btn:hover {
+    background: #4ade80;
+    color: #0f1711; /* Dark background color */
+    box-shadow: 0 0 15px rgba(74, 222, 128, 0.4);
+    transform: translateY(-2px);
+}

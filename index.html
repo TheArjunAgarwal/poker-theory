@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Poker Theory Reading Group</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container">
+    <header>
+        <h1 id="course-title">Loading Curriculum...</h1>
+    </header>
+
+    <main>
+        <h2>General Information</h2>
+        <ul>
+            <li><b>Time</b>: 6:45 pm to 8:00 pm, Tuesdays</li>
+            <li><b>Venue</b>: LH04</li>
+        </ul>
+        <p>
+            The plan is to analyze poker from a mathematical perspective and then try to code up a poker playing bot. Like the general plan is that over this semester (minus exam and quiz weeks) we will meet about 8-10 times. We'll spend the first half of the meetings talking about the probability and game theory side and the next half about algorithms and implementation. If time permits, we can try to have a tournament between the bots as well.
+        </p>
+        <div class="cta-container">
+    <a href="https://github.com/TheArjunAgarwal/python-poker-bots" class="github-btn">
+        Github Repository of Bots Designed
+    </a>
+</div>
+        <h2>Weekly Meetings</h2>
+        <div id="lecture-list"></div>
+    </main>
+</div>
+
+<script>
+// The JS logic remains exactly as provided in your template
+async function loadLectures() {
+    try {
+        const response = await fetch('data.json');
+        const data = await response.json();
+        
+        document.getElementById('course-title').textContent = data.courseTitle;
+        const list = document.getElementById('lecture-list');
+
+        data.lectures.forEach(lec => {
+            const resourceItems = lec.resources.map(res => 
+                `<li>${res.name}: [<a href="${res.link}">${res.label}</a>]</li>`
+            ).join('');
+
+            const html = `
+                <div class="lecture-card">
+                    <div class="lecture-title">Tutorial ${lec.id}: ${lec.title}</div>
+                    <div class="meta">${lec.date}, Presented By: ${lec.TA}</div>
+                    ${lec.description ? `<p class="lecture-description">${lec.description}</p>` : ""}
+                    <span class="section-label">Resources</span>
+                    <ul>${resourceItems}</ul>
+                </div>
+            `;
+            list.innerHTML += html;
+        });
+    } catch (e) {
+        console.error("Error loading curriculum data.", e);
+        document.getElementById('course-title').textContent = "Failed to load course.";
+    }
+}
+loadLectures();
+</script>
+
+</body>
+</html>
