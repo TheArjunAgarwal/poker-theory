@@ -49,7 +49,7 @@ async function loadLectures() {
 
             const html = `
                 <div class="lecture-card">
-                    <div class="lecture-title">Tutorial ${lec.id}: ${lec.title}</div>
+                    <div class="lecture-title">Meeting ${lec.id}: ${lec.title}</div>
                     <div class="meta">${lec.date}, Presented By: ${lec.TA}</div>
                     ${lec.description ? `<p class="lecture-description">${lec.description}</p>` : ""}
                     <span class="section-label">Resources</span>
