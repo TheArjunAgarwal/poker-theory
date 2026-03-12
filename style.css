@@ -107,3 +107,16 @@ a:hover { border-bottom: 1px solid #60a5fa; }
     box-shadow: 0 0 15px rgba(74, 222, 128, 0.4);
     transform: translateY(-2px);
 }
+
+footer {
+    margin-top: 40px;
+    padding: 20px 0;
+    border-top: 1px solid #ddd;
+    text-align: center;
+    font-size: 0.8rem;
+}
+
+footer a {
+    color: #f87171; /* Or whatever your theme color is */
+    text-decoration: none;
+}
