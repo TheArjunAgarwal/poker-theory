@@ -8,7 +8,7 @@
       "TA": "Arjun Maneesh Agarwal",
       "description": "We talk about some general ideas and (fail to) solve Kunh Poker.",
       "resources": [
-        { "name": "Lecture Slides", "link": "#", "label": "PDF" }
+        { "name": "Lecture Slides", "link": "slides/meet-1.pdf", "label": "PDF" }
       ]
     },
     {
@@ -18,7 +18,7 @@
       "TA": "Arjun Maneesh Agarwal",
       "description": "Hand Odds, Pot Odds, Expected Value and Raising",
       "resources": [
-        { "name": "Lecture Slides", "link": "#", "label": "PDF" }
+        { "name": "Lecture Slides", "link": "slides/meet-2.pdf", "label": "PDF" }
       ]
     },
     {
@@ -28,7 +28,7 @@
       "TA": "Arjun Maneesh Agarwal",
       "description": "Hand Strength, Range Analysis, VPIP and Basic Bluffing",
       "resources": [
-        { "name": "Lecture Slides", "link": "#", "label": "PDF" }
+        { "name": "Lecture Slides", "link": "slides/meet-3.pdf", "label": "PDF" }
       ]
     }
   ]
